@@ -1,5 +1,8 @@
 import React, { useState, useEffect} from "react";
-import Space from './spaceContainer'
+import Space from './components/spaceContainer'
+import Header from './components/header'
+import Footer from './components/footer'
+import Title from './components/title'
 
 import "./App.css";
 import axios from "axios";
@@ -21,14 +24,17 @@ function App() {
       })
 
 
-  })
+  }, [])
+
+    const likeApp = () => {
+      return setCount(count + 1)
+    }
 
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun <span role="img" aria-label='go!'>🚀</span>!
-      </p>
+      <header likeApp = {likeApp} numberOfLikes = {count} />
+      <Space data = {data} />
+      <footer />
     </div>
   );
 }
