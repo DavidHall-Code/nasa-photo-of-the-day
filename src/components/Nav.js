@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import logo from './nasaLogo.jpg';
+import logo from './nasaLogo.png';
 import styled from 'styled-components'
 
 export default function NavBar() {
@@ -22,8 +22,30 @@ export default function NavBar() {
 }
 
 const NavBarDiv = styled.div`
+h1 {
+  font-size: 5rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+margin: auto;
   
 `;
 const NavSection = styled.div`
+display: flex;
+justify-content: space-evenly;
+text-decoration: none;
+margin: auto;
+
+@media (max-width: 800px) {
+  display: block;
+  margin-top: 5%;
+}
   
 `;
