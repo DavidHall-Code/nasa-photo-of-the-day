@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import logo from './nasaLogo.png';
+import logo from '../assets/nasaLogo.png'
 import styled from 'styled-components'
 
 export default function NavBar() {
@@ -14,7 +14,7 @@ export default function NavBar() {
       <NavSection>
         <img className='App-logo' src={logo} alt='nasaLogo' />
         <h1>Photo Of The Day</h1>
-        <p>By: David Hall</p>
+        {/* <p>By: David Hall</p> */}
       </NavSection>
       <h3>Today's Date: {`${month}-${day}-${year}`}</h3>
     </NavBarDiv>
@@ -24,6 +24,8 @@ export default function NavBar() {
 const NavBarDiv = styled.div`
 h1 {
   font-size: 5rem;
+  color: #c4f1f2;
+  text-shadow: 3px 3px black;
 }
 
 p {
@@ -32,6 +34,14 @@ p {
 
 h3 {
   font-size: 1.5rem;
+  color: #c4f1f2;
+  text-shadow: 2px 2px black;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: transform .3s ease-in-out;
+  }
+  transition: transform .3s ease-in-out;
 }
 
 margin: auto;
