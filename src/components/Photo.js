@@ -1,11 +1,11 @@
 import React from 'react';
-import useRequest from '../hook/userRequest';
+import userRequest from '../hook/userRequest';
 import PhotoCard from './PhotoCard';
 import NavBar from './Nav';
-
+import styled from 'styled-components'
 
 export default function Data() {
-  const { data, loading, error } = useRequest(
+  const { data, loading, error } = userRequest(
     'https://api.nasa.gov/planetary/apod?api_key=PGZGMrCnZwWQRecXqsROalxcmvyhygGql0iLL1Of'
   );
 
@@ -37,3 +37,10 @@ export default function Data() {
   );
 }
 
+const PhotoDiv = styled.div`
+  
+`;
+
+const LoadingDiv = styled.div`
+  
+`;
